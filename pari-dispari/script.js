@@ -1,6 +1,6 @@
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. - FATTO
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). - FATTO
-// Sommiamo i due numeri
+// Sommiamo i due numeri - FATTO
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
@@ -12,7 +12,7 @@ do {
 
 } while (!(inputEvenOdd == "pari" || inputEvenOdd == "dispari"))
 
-console.log("Hai inserito " + inputEvenOdd);
+console.log("Hai inserito: " + inputEvenOdd);
 
 //Chiede numero da 1 a 5
 let inputNumber = 0;
@@ -21,25 +21,26 @@ do {
 
 } while (inputNumber < 1 || inputNumber > 5 || isNaN(inputNumber));
 
-console.log("Hai inserito " + inputNumber);
+console.log("Hai inserito: " + inputNumber);
 
-//Genera un numero random per il compter
+//Genera un numero random per il computer
 function randomNumberGen(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 const aiNumber = randomNumberGen(1, 5);
 
-console.log("AI inserisce " + aiNumber);
+console.log("AI inserisce: " + aiNumber);
 
 //Gestisce la somma
 let sum = inputNumber + aiNumber;
 
-console.log("La somma è " +  sum);
+console.log("La somma è " + sum);
 
 function isEven(number) {
     if (number % 2 == 0) {
         return true;
     }
+
     return false;
 }
 
